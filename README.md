@@ -349,12 +349,9 @@ This repository is setup like any HL7 FHIR IG project but also includes the CQL 
            |-- valueset
 ```
 
-## Extracting MAT Packages
+## Extracting MADiE (MAT) Packages
 
-The CQF Tooling provides support for extracting a MAT exported package into the
-directories of this repository so that the measure is included in the published
-implementation guide. To do this, place the MAT export files (unzipped) in a
-directory in the `bundles\mat` directory, and then run the following tooling
+The CQF Tooling provides support for extracting a MADiE (previously known as Measure Authoring Tool, or MAT) exported package into the directories of this repository so that the measure is included in the published implementation guide. To do this, place the MADiE export files (unzipped) in a directory in the `bundles\mat` directory, and then run the following tooling
 command:
 
 ```
@@ -364,7 +361,7 @@ command:
 For example:
 
 ```
-input-cache\tooling-cli-3.7.0.jar -ExtractMATBundle bundles\mat\CLONE124_v6_03-Artifacts\measure-json-bundle.json
+input-cache\tooling-cli-3.8.0.jar -ExtractMatBundle bundles\mat\CLONE124_v6_03-Artifacts\measure-json-bundle.json
 ```
 
 ## Refresh IG Processing
@@ -376,7 +373,6 @@ The CQF Tooling provides "refresh" tooling that performs the following functions
 * Refreshes generated content for each knowledge artifact (Library, Measure, PlanDefinition, ActivityDefinition) including parameters, dependencies, and effective data requirements
 
 Whenever changes are made to the CQL, Library, or Measure resources, run the `_refresh` command to refresh the implementation guide content with the new content, and then run `_genonce` to run the publication tooling on the implementation guide (the same process that the continuous integration build uses to publish the implementation guide when commits are made to this repository).
-
 
 ## Measure Package Prep Process
 
