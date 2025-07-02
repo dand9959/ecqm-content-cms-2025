@@ -1,7 +1,7 @@
 @ECHO OFF
 SET tooling_jar=tooling-cli-3.8.0.jar
 SET input_cache_path=%~dp0input-cache
-SET mat_bundle=bundles\mat\CMS2\CMS2FHIR-R1-MeasureExport\CMS2FHIR-v0.4.000-FHIR.json
+SET mat_bundle=bundles\mat\NHSNHypoglycemia-v0.0.001-FHIR6_6-30-2025\NHSNHypoglycemia-v0.0.001-FHIR.json
 
 SET JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
 

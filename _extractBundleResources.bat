@@ -1,7 +1,7 @@
 @ECHO OFF
 SET tooling_jar=tooling-cli-3.8.0.jar
 SET input_cache_path=%~dp0input-cache
-SET mat_bundle=input\tests\measure\CMS2FHIRPCSDepressionScreenAndFollowUp
+SET mat_bundle=input\tests\measure\NHSNGlycemicControlHypoglycemiaInitialPopulation
 
 SET JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
 
