@@ -1,0 +1,22 @@
+{
+  "resourceType": "ServiceRequest",
+  "id": "5a91b585-7096-4209-9f2e-6e8a02c6a7bb",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-servicerequest" ]
+  },
+  "status": "completed",
+  "intent": "order",
+  "code": {
+    "coding": [ {
+      "system": "http://snomed.info/sct",
+      "version": "2024-09",
+      "code": "336623009",
+      "display": "Oxygen nasal cannula (physical object)",
+      "userSelected": true
+    } ]
+  },
+  "subject": {
+    "reference": "Patient/98360de4-60ff-4a6d-840f-785ad59628e1"
+  },
+  "authoredOn": "2026-07-01T06:59:00.000+00:00"
+}

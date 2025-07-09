@@ -1,0 +1,30 @@
+{
+  "resourceType": "Coverage",
+  "id": "6621e171-eb44-48e7-8840-de4de59525fd",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-coverage" ]
+  },
+  "status": "active",
+  "type": {
+    "coding": [ {
+      "system": "https://nahdo.org/sopt",
+      "version": "1.0.1",
+      "code": "1",
+      "display": "MEDICARE",
+      "userSelected": true
+    } ]
+  },
+  "subscriberId": "AB9876",
+  "beneficiary": {
+    "reference": "Patient/afd5733f-e9eb-4a17-9be7-783850a132fc"
+  },
+  "relationship": {
+    "coding": [ {
+      "system": "http://terminology.hl7.org/CodeSystem/subscriber-relationship",
+      "code": "self"
+    } ]
+  },
+  "payor": [ {
+    "reference": "Organization/538b12c7-f7a6-4aad-bb15-bd2808939579"
+  } ]
+}

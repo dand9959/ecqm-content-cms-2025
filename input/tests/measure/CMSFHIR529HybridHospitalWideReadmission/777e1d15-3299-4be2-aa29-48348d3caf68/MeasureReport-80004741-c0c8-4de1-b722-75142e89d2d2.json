@@ -1,0 +1,67 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "80004741-c0c8-4de1-b722-75142e89d2d2",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "08013b91-81ae-4f02-b261-82f1f5b6c936-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "777e1d15-3299-4be2-aa29-48348d3caf68"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#08013b91-81ae-4f02-b261-82f1f5b6c936-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Oxygen procedure interval begins prior to and ends on arrival to ED, admitted to inpatient.  Service request order for oxygen on arrival to ED."
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMSFHIR529HybridHospitalWideReadmission",
+  "period": {
+    "start": "2026-07-01",
+    "end": "2027-06-30"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/777e1d15-3299-4be2-aa29-48348d3caf68"
+  }, {
+    "reference": "Encounter/d30fe78b-8362-4690-a6d2-ab22ee3cb196"
+  }, {
+    "reference": "Encounter/39bc4d44-6cac-4ec1-9f2f-41f3cb85dab0"
+  }, {
+    "reference": "ServiceRequest/6bd1413e-8fcd-4752-93ab-66c30f9304a6"
+  }, {
+    "reference": "Procedure/90e70477-79d9-4c2e-b830-c0135def8d28"
+  }, {
+    "reference": "Coverage/b501adfb-c6e8-4107-968c-22a0d16fdcc0"
+  }, {
+    "reference": "Practitioner/becd0f77-5f7d-4480-a070-0cdf436d7146"
+  } ]
+}

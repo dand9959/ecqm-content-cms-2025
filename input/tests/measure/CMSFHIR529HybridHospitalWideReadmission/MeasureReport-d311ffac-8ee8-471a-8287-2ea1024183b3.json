@@ -1,0 +1,65 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "d311ffac-8ee8-471a-8287-2ea1024183b3",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "754418ba-6dee-4fcd-b99f-43bde29b2cb3-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "fcb541c7-e3c5-42e0-b3e3-56e1e8b2404b"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#754418ba-6dee-4fcd-b99f-43bde29b2cb3-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "Oxygen nasal cannula device order during first minute of ED encounter, admitted to inpatient"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMSFHIR529HybridHospitalWideReadmission",
+  "period": {
+    "start": "2026-07-01",
+    "end": "2027-06-30"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Patient/fcb541c7-e3c5-42e0-b3e3-56e1e8b2404b"
+  }, {
+    "reference": "Encounter/21eb47d4-b8e6-4dcb-933c-9e320ce98892"
+  }, {
+    "reference": "Encounter/c91b5552-fc67-4502-89b1-2bf5e574c9b0"
+  }, {
+    "reference": "ServiceRequest/81928212-458a-4c23-94b3-8f371656e405"
+  }, {
+    "reference": "Coverage/643d15b0-87ac-42d7-9281-09aa245052cf"
+  }, {
+    "reference": "Practitioner/aaf453ea-c04b-490a-bccf-506b362a15d5"
+  } ]
+}
