@@ -99,7 +99,7 @@
       },
       "diagnosis": [ {
         "condition": {
-          "reference": "Procedure/967e440e-8766-4705-924b-00b4a61b0458"
+          "reference": "Procedure/77d63d66-7b0d-4684-8e57-b7cdc234906e"
         },
         "rank": 1
       } ]
@@ -136,7 +136,7 @@
         "reference": "Patient/9d11a22c-a1b8-4dd2-ae22-d04194da5e15"
       },
       "encounter": {
-        "reference": "Encounter/98e61d67-c61d-4fcd-b6f6-f8d2ae77fd41"
+        "reference": "Encounter/4046b954-8a57-424c-b56a-11b34d11e3d4"
       },
       "effectiveDateTime": "2026-04-11T08:00:00.000+00:00",
       "valueQuantity": {
