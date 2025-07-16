@@ -40,7 +40,7 @@
         "reference": "Patient/ea9c34ee-b50e-4d13-bd9c-ab2033d15717"
       },
       "encounter": {
-        "reference": "Encounter/Encounter-WithPregnancyConditionDiagnosis"
+        "reference": "Encounter/2ae43ff9-06d9-4921-950d-0e85a771a414"
       }
     },
     "request": {
