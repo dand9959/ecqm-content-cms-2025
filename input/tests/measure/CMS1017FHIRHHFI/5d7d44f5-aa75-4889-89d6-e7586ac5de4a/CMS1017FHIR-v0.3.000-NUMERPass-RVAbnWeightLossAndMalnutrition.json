@@ -1,0 +1,678 @@
+{
+  "resourceType": "Bundle",
+  "id": "tests-NumerPass-RVAbnWeightLossAndMalnutrition-bundle",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Encounter/c2df5011-8fe0-47b1-bda0-a1ccceaefa55",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "c2df5011-8fe0-47b1-bda0-a1ccceaefa55",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "IMP",
+        "display": "inpatient encounter"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "183452005"
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/5d7d44f5-aa75-4889-89d6-e7586ac5de4a"
+      },
+      "period": {
+        "start": "2026-10-19T08:30:00.000+00:00",
+        "end": "2026-10-21T08:15:00.000+00:00"
+      },
+      "reasonCode": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "14047009"
+        } ]
+      }, {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "64859006"
+        } ]
+      }, {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/sid/icd-10-cm",
+          "code": "R63.4",
+          "display": "Abnormal weight loss"
+        } ]
+      }, {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/sid/icd-10-cm",
+          "code": "E44.0"
+        } ]
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/c2df5011-8fe0-47b1-bda0-a1ccceaefa55"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/6b50250e-1ea3-4423-bf3f-30646eb8aeab",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "6b50250e-1ea3-4423-bf3f-30646eb8aeab",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "EMER",
+        "display": "emergency encounter"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "4525004"
+        } ]
+      } ],
+      "subject": {
+        "reference": "Patient/5d7d44f5-aa75-4889-89d6-e7586ac5de4a"
+      },
+      "period": {
+        "start": "2026-10-18T09:15:00.000+00:00",
+        "end": "2026-10-19T08:15:00.000+00:00"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/6b50250e-1ea3-4423-bf3f-30646eb8aeab"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Patient/5d7d44f5-aa75-4889-89d6-e7586ac5de4a",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "5d7d44f5-aa75-4889-89d6-e7586ac5de4a",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2106-3",
+            "display": "White"
+          }
+        }, {
+          "url": "text",
+          "valueString": "White"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2135-2",
+            "display": "Hispanic or Latino"
+          }
+        }, {
+          "url": "text",
+          "valueString": "Hispanic or Latino"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-sex",
+        "valueCode": "248153007"
+      } ],
+      "identifier": [ {
+        "system": "http://hospital.smarthealthit.org",
+        "value": "999999999"
+      } ],
+      "name": [ {
+        "family": "Example",
+        "given": [ "Patient" ]
+      } ],
+      "gender": "female",
+      "birthDate": "1956-01-01"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Patient/5d7d44f5-aa75-4889-89d6-e7586ac5de4a"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Claim/0f9f8e5f-8536-4fdf-a6ed-299d12b04bd3",
+    "resource": {
+      "resourceType": "Claim",
+      "id": "0f9f8e5f-8536-4fdf-a6ed-299d12b04bd3",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-claim" ]
+      },
+      "status": "active",
+      "type": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/claim-type",
+          "code": "institutional",
+          "display": "Institutional"
+        } ]
+      },
+      "use": "claim",
+      "patient": {
+        "reference": "Patient/5d7d44f5-aa75-4889-89d6-e7586ac5de4a"
+      },
+      "created": "2026-10-22",
+      "provider": {
+        "reference": "Practitioner/practitioner-1"
+      },
+      "priority": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/processpriority",
+          "code": "normal"
+        } ]
+      },
+      "diagnosis": [ {
+        "sequence": 1,
+        "diagnosisCodeableConcept": {
+          "coding": [ {
+            "system": "http://snomed.info/sct",
+            "code": "14047009"
+          } ]
+        }
+      } ],
+      "insurance": [ {
+        "sequence": 1,
+        "focal": true,
+        "coverage": {
+          "reference": "Coverage/coverage-1"
+        }
+      } ],
+      "item": [ {
+        "sequence": 1,
+        "diagnosisSequence": [ 1, 2, 3 ],
+        "productOrService": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/ex-USCLS",
+            "code": "1101"
+          } ]
+        },
+        "encounter": [ {
+          "reference": "Encounter/c2df5011-8fe0-47b1-bda0-a1ccceaefa55"
+        } ]
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Claim/0f9f8e5f-8536-4fdf-a6ed-299d12b04bd3"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Claim/3a2febf3-446f-48da-82f6-c8e01dd8821d",
+    "resource": {
+      "resourceType": "Claim",
+      "id": "3a2febf3-446f-48da-82f6-c8e01dd8821d",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-claim" ]
+      },
+      "status": "active",
+      "type": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/claim-type",
+          "code": "institutional",
+          "display": "Institutional"
+        } ]
+      },
+      "use": "claim",
+      "patient": {
+        "reference": "Patient/5d7d44f5-aa75-4889-89d6-e7586ac5de4a"
+      },
+      "created": "2026-11-01",
+      "provider": {
+        "reference": "Practitioner/practitioner-1"
+      },
+      "priority": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/processpriority",
+          "code": "normal"
+        } ]
+      },
+      "diagnosis": [ {
+        "sequence": 1,
+        "diagnosisCodeableConcept": {
+          "coding": [ {
+            "system": "http://hl7.org/fhir/sid/icd-10-cm",
+            "code": "M80.00XA",
+            "display": "Age-related osteoporosis with current pathological fracture, unspecified site, initial encounter for fracture"
+          } ]
+        }
+      } ],
+      "insurance": [ {
+        "sequence": 1,
+        "focal": true,
+        "coverage": {
+          "reference": "Coverage/coverage-1"
+        }
+      } ],
+      "item": [ {
+        "sequence": 1,
+        "diagnosisSequence": [ 1, 2, 3 ],
+        "productOrService": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/ex-USCLS",
+            "code": "1101"
+          } ]
+        },
+        "encounter": [ {
+          "reference": "Encounter/c2df5011-8fe0-47b1-bda0-a1ccceaefa55"
+        } ]
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Claim/3a2febf3-446f-48da-82f6-c8e01dd8821d"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Claim/cb8376d1-cd22-4e62-a57d-0da7ce973a7e",
+    "resource": {
+      "resourceType": "Claim",
+      "id": "cb8376d1-cd22-4e62-a57d-0da7ce973a7e",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-claim" ]
+      },
+      "status": "active",
+      "type": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/claim-type",
+          "code": "institutional",
+          "display": "Institutional"
+        } ]
+      },
+      "use": "claim",
+      "patient": {
+        "reference": "Patient/5d7d44f5-aa75-4889-89d6-e7586ac5de4a"
+      },
+      "created": "2026-11-02",
+      "provider": {
+        "reference": "Practitioner/practitioner-1"
+      },
+      "priority": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/processpriority",
+          "code": "normal"
+        } ]
+      },
+      "diagnosis": [ {
+        "sequence": 1,
+        "diagnosisCodeableConcept": {
+          "coding": [ {
+            "system": "http://hl7.org/fhir/sid/icd-10-cm",
+            "code": "R63.4",
+            "display": "Abnormal weight loss"
+          } ]
+        },
+        "onAdmission": {
+          "coding": [ {
+            "system": "https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/HospitalAcqCond/Coding",
+            "code": "Y"
+          } ]
+        }
+      } ],
+      "insurance": [ {
+        "sequence": 1,
+        "focal": true,
+        "coverage": {
+          "reference": "Coverage/coverage-1"
+        }
+      } ],
+      "item": [ {
+        "sequence": 1,
+        "diagnosisSequence": [ 1 ],
+        "productOrService": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/ex-USCLS",
+            "code": "1101"
+          } ]
+        },
+        "encounter": [ {
+          "reference": "Encounter/c2df5011-8fe0-47b1-bda0-a1ccceaefa55"
+        } ]
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Claim/cb8376d1-cd22-4e62-a57d-0da7ce973a7e"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Claim/9ecada0d-6621-408d-9123-17d45b00d301",
+    "resource": {
+      "resourceType": "Claim",
+      "id": "9ecada0d-6621-408d-9123-17d45b00d301",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-claim" ]
+      },
+      "status": "active",
+      "type": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/claim-type",
+          "code": "institutional",
+          "display": "Institutional"
+        } ]
+      },
+      "use": "claim",
+      "patient": {
+        "reference": "Patient/5d7d44f5-aa75-4889-89d6-e7586ac5de4a"
+      },
+      "created": "2026-11-03",
+      "provider": {
+        "reference": "Practitioner/practitioner-1"
+      },
+      "priority": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/processpriority",
+          "code": "normal"
+        } ]
+      },
+      "diagnosis": [ {
+        "sequence": 1,
+        "diagnosisCodeableConcept": {
+          "coding": [ {
+            "system": "http://hl7.org/fhir/sid/icd-10-cm",
+            "code": "E44.0",
+            "display": "Moderate protein-calorie malnutrition"
+          } ]
+        },
+        "onAdmission": {
+          "coding": [ {
+            "system": "https://www.cms.gov/Medicare/Medicare-Fee-for-Service-Payment/HospitalAcqCond/Coding",
+            "code": "Y"
+          } ]
+        }
+      } ],
+      "insurance": [ {
+        "sequence": 1,
+        "focal": true,
+        "coverage": {
+          "reference": "Coverage/coverage-1"
+        }
+      } ],
+      "item": [ {
+        "sequence": 1,
+        "diagnosisSequence": [ 1 ],
+        "productOrService": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/ex-USCLS",
+            "code": "1101"
+          } ]
+        },
+        "encounter": [ {
+          "reference": "Encounter/c2df5011-8fe0-47b1-bda0-a1ccceaefa55"
+        } ]
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Claim/9ecada0d-6621-408d-9123-17d45b00d301"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Observation/c46cd691-0c70-4a16-ad76-7a767e0e1f95",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "c46cd691-0c70-4a16-ad76-7a767e0e1f95",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/core/StructureDefinition/us-core-bmi" ]
+      },
+      "status": "final",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "vital-signs",
+          "display": "Vital Signs"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "39156-5",
+          "display": "Body mass index (BMI) [Ratio]"
+        } ],
+        "text": "BMI"
+      },
+      "subject": {
+        "reference": "Patient/5d7d44f5-aa75-4889-89d6-e7586ac5de4a"
+      },
+      "effectiveDateTime": "2026-10-20T08:00:00.000+00:00",
+      "valueQuantity": {
+        "value": 13.5,
+        "unit": "kg/m2",
+        "system": "http://unitsofmeasure.org",
+        "code": "kg/m2"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Observation/c46cd691-0c70-4a16-ad76-7a767e0e1f95"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Practitioner/7e71fba7-2f70-4867-9de1-4d8b9068353d",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "7e71fba7-2f70-4867-9de1-4d8b9068353d",
+      "identifier": [ {
+        "system": "http://www.cms.gov/identifiers/pracitioners",
+        "value": "P12345"
+      } ],
+      "name": [ {
+        "use": "official",
+        "family": "Smith",
+        "given": [ "John" ]
+      } ],
+      "qualification": [ {
+        "identifier": [ {
+          "system": "http://hl7.org/fhir/sid/us-npi",
+          "value": "1234567890"
+        } ],
+        "code": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MD",
+            "display": "Medical License number"
+          } ]
+        }
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Practitioner/7e71fba7-2f70-4867-9de1-4d8b9068353d"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Coverage/9ecec816-e919-4f51-9b30-8a5766badac0",
+    "resource": {
+      "resourceType": "Coverage",
+      "id": "9ecec816-e919-4f51-9b30-8a5766badac0",
+      "status": "active",
+      "beneficiary": {
+        "reference": "Patient/5d7d44f5-aa75-4889-89d6-e7586ac5de4a"
+      },
+      "payor": [ {
+        "reference": "Organization/f2da04a9-e5cf-45a3-bc42-889ce2f54987"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Coverage/9ecec816-e919-4f51-9b30-8a5766badac0"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Organization/f2da04a9-e5cf-45a3-bc42-889ce2f54987",
+    "resource": {
+      "resourceType": "Organization",
+      "id": "f2da04a9-e5cf-45a3-bc42-889ce2f54987",
+      "identifier": [ {
+        "system": "http://cms.gov/insurance-ids",
+        "value": "AET12345"
+      } ],
+      "type": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+          "code": "prov",
+          "display": "Healthcare Provider"
+        } ]
+      } ],
+      "name": "Aetna Insurance",
+      "telecom": [ {
+        "system": "phone",
+        "value": "+1-800-123-4567"
+      } ],
+      "address": [ {
+        "line": [ "123 Main Street" ],
+        "city": "Cityville",
+        "state": "CA",
+        "postalCode": "12345",
+        "country": "USA"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Organization/f2da04a9-e5cf-45a3-bc42-889ce2f54987"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/fab39421-c73d-428e-90f7-ec313ae3869f",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "fab39421-c73d-428e-90f7-ec313ae3869f",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "f45a89b8-acd9-4512-b841-a18d0fd0d54e-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "5d7d44f5-aa75-4889-89d6-e7586ac5de4a"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#f45a89b8-acd9-4512-b841-a18d0fd0d54e-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "Encounter with a Abnormal Weight Loss and Malnutrition"
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/CMS1017FHIRHHFI",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "DenominatorExclusion_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "NumeratorExclusion_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator-exclusion",
+              "display": "Numerator Exclusion"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "MeasureObservation_1_1_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "measure-observation",
+              "display": "Measure Observation"
+            } ]
+          },
+          "count": 2
+        }, {
+          "id": "MeasureObservation_1_2_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "measure-observation",
+              "display": "Measure Observation"
+            } ]
+          },
+          "count": 1
+        } ],
+        "measureScore": {
+          "value": 0.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Encounter/c2df5011-8fe0-47b1-bda0-a1ccceaefa55"
+      }, {
+        "reference": "Encounter/6b50250e-1ea3-4423-bf3f-30646eb8aeab"
+      }, {
+        "reference": "Patient/5d7d44f5-aa75-4889-89d6-e7586ac5de4a"
+      }, {
+        "reference": "Claim/0f9f8e5f-8536-4fdf-a6ed-299d12b04bd3"
+      }, {
+        "reference": "Claim/3a2febf3-446f-48da-82f6-c8e01dd8821d"
+      }, {
+        "reference": "Claim/cb8376d1-cd22-4e62-a57d-0da7ce973a7e"
+      }, {
+        "reference": "Claim/9ecada0d-6621-408d-9123-17d45b00d301"
+      }, {
+        "reference": "Observation/c46cd691-0c70-4a16-ad76-7a767e0e1f95"
+      }, {
+        "reference": "Practitioner/7e71fba7-2f70-4867-9de1-4d8b9068353d"
+      }, {
+        "reference": "Coverage/9ecec816-e919-4f51-9b30-8a5766badac0"
+      }, {
+        "reference": "Organization/f2da04a9-e5cf-45a3-bc42-889ce2f54987"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MeasureReport/fab39421-c73d-428e-90f7-ec313ae3869f"
+    }
+  } ]
+}

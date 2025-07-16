@@ -1,4 +1,4 @@
-library CMS1017FHIRHHFI version '0.2.000'
+library CMS1017FHIRHHFI version '0.3.000'
 
 using QICore version '6.0.0'
 
@@ -38,7 +38,6 @@ valueset "Stroke": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1
 valueset "Suicide Attempt": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1248.130'
 
 parameter "Measurement Period" Interval<DateTime>
-  default Interval[@2026-01-01T00:00:00.0Z, @2026-12-31T23:59:00.0Z )
 
 context Patient
 
@@ -60,21 +59,23 @@ define "Numerator":
 define "Encounter Where A Fall And Moderate Injury Occurred Not POA":
   "Encounter With A Fall Not Present On Admission" FallOccurred
     where exists ( ( FallOccurred.claimDiagnosis ( ) ) ModerateFallOccurred
-        where ModerateFallOccurred.onAdmission is null
-          or ModerateFallOccurred.onAdmission in "Not Present On Admission or Documentation Insufficient to Determine"
-            and ( ModerateFallOccurred.diagnosis in "Moderate Injuries"
-                or ModerateFallOccurred.diagnosis.getCondition ( ).code in "Moderate Injuries"
-            )
+        where ( ModerateFallOccurred.onAdmission is null
+            or ModerateFallOccurred.onAdmission in "Not Present On Admission or Documentation Insufficient to Determine"
+        )
+          and ( ModerateFallOccurred.diagnosis in "Moderate Injuries"
+              or ModerateFallOccurred.diagnosis.getCondition ( ).code in "Moderate Injuries"
+          )
     )
 
 define "Encounter Where A Fall And Major Injury Occurred Not POA":
   "Encounter With A Fall Not Present On Admission" FallOccurred
     where exists ( ( FallOccurred.claimDiagnosis ( ) ) MajorFallOccurred
-        where MajorFallOccurred.onAdmission is null
-          or MajorFallOccurred.onAdmission in "Not Present On Admission or Documentation Insufficient to Determine"
-            and ( MajorFallOccurred.diagnosis in "Major Injuries"
-                or MajorFallOccurred.diagnosis.getCondition ( ).code in "Major Injuries"
-            )
+        where ( MajorFallOccurred.onAdmission is null
+            or MajorFallOccurred.onAdmission in "Not Present On Admission or Documentation Insufficient to Determine"
+        )
+          and ( MajorFallOccurred.diagnosis in "Major Injuries"
+              or MajorFallOccurred.diagnosis.getCondition ( ).code in "Major Injuries"
+          )
     )
 
 define "Encounter Where A Fall Occurred":
@@ -328,22 +329,21 @@ define fluent function hasDiagnosisNotPresentOnAdmission(encounter Encounter, di
   )
 
 define fluent function hasDiagnosisNotPresentOnAdmissionOrNull(encounter Encounter, diagnosisValueSet ValueSet):
-  exists ( encounter InptEncounter
-      let claim: ( [Claim] Claims
-          where Claims.status = 'active'
-            and Claims.use = 'claim'
-            and exists ( Claims.item ClaimsItem
-                where ClaimsItem.encounter.references ( InptEncounter )
-            )
-      ),
-      claimItem: ( claim.item ClaimsItem
-          where ClaimsItem.encounter.references ( InptEncounter )
-      )
-      return claim.diagnosis ClaimsDiag
-        where ClaimsDiag.sequence in claimItem.diagnosisSequence
-          and ClaimsDiag.onAdmission is null
-          or ClaimsDiag.onAdmission in "Not Present On Admission or Documentation Insufficient to Determine"
-            and ClaimsDiag.diagnosis in diagnosisValueSet
+  exists ( [Claim] C
+      where C.status = 'active'
+        and C.use = 'claim'
+        and exists ( C.item I
+            where I.encounter.references ( encounter )
+        )
+      return C.diagnosis D
+        where exists ( C.item I
+            where I.encounter.references ( encounter )
+              and D.sequence in I.diagnosisSequence
+        )
+          and ( D.onAdmission is null
+              or D.onAdmission in "Not Present On Admission or Documentation Insufficient to Determine"
+          )
+          and D.diagnosis in diagnosisValueSet
   )
 
 define fluent function encountersDiagnosis(Encounter Encounter):
