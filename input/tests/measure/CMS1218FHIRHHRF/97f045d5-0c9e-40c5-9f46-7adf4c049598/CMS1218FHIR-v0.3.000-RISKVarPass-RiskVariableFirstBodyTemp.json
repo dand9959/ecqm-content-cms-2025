@@ -1,0 +1,328 @@
+{
+  "resourceType": "Bundle",
+  "id": "tests-RiskVarPassFirstBodyTemperature-bundle",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Encounter/4bd61661-cbc0-47b3-870c-e76843dee57c",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "4bd61661-cbc0-47b3-870c-e76843dee57c",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "IMP",
+        "display": "inpatient encounter"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "112689000",
+          "display": "Hospital admission, elective, with complete pre-admission work-up"
+        } ],
+        "text": "Hospital admission, elective, with complete pre-admission work-up"
+      } ],
+      "priority": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "103390000"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/97f045d5-0c9e-40c5-9f46-7adf4c049598"
+      },
+      "period": {
+        "start": "2026-04-10T08:00:00.000Z",
+        "end": "2026-04-14T08:15:00.000Z"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/4bd61661-cbc0-47b3-870c-e76843dee57c"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Patient/97f045d5-0c9e-40c5-9f46-7adf4c049598",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "97f045d5-0c9e-40c5-9f46-7adf4c049598",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2054-5",
+            "display": "Black or African American",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "Black or African American"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2186-5",
+            "display": "Not Hispanic or Latino",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "Not Hispanic or Latino"
+        } ]
+      } ],
+      "identifier": [ {
+        "type": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MR"
+          } ]
+        },
+        "system": "https://bonnie-fhir.healthit.gov/",
+        "value": "61152a3b98086b7a79cbd7c1"
+      } ],
+      "active": true,
+      "name": [ {
+        "use": "usual",
+        "family": "DENOMPass",
+        "given": [ "RiskVariableASAClass" ]
+      } ],
+      "gender": "female",
+      "birthDate": "1966-07-12"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Patient/97f045d5-0c9e-40c5-9f46-7adf4c049598"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Observation/87cb0008-5001-4a1b-9a06-6cce1718bc79",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "87cb0008-5001-4a1b-9a06-6cce1718bc79",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-temperature" ]
+      },
+      "status": "final",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "vital-signs",
+          "display": "Vital Signs"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "8310-5",
+          "display": "Body temperature"
+        } ],
+        "text": "Body temperature"
+      },
+      "subject": {
+        "reference": "Patient/97f045d5-0c9e-40c5-9f46-7adf4c049598"
+      },
+      "encounter": {
+        "reference": "Encounter/4bd61661-cbc0-47b3-870c-e76843dee57c"
+      },
+      "effectiveDateTime": "2026-04-11T08:00:00.000Z",
+      "valueQuantity": {
+        "value": 37,
+        "unit": "Cel",
+        "system": "http://unitsofmeasure.org",
+        "code": "Cel"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Observation/87cb0008-5001-4a1b-9a06-6cce1718bc79"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Observation/f34f2013-907d-4ebf-ab18-75e642c7cf4b",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "f34f2013-907d-4ebf-ab18-75e642c7cf4b",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/core/StructureDefinition/us-core-body-temperature" ]
+      },
+      "status": "final",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "vital-signs",
+          "display": "Vital Signs"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "8310-5",
+          "display": "Body temperature"
+        } ],
+        "text": "Body temperature"
+      },
+      "subject": {
+        "reference": "Patient/97f045d5-0c9e-40c5-9f46-7adf4c049598"
+      },
+      "encounter": {
+        "reference": "Encounter/4bd61661-cbc0-47b3-870c-e76843dee57c"
+      },
+      "effectiveDateTime": "2026-04-11T09:00:00.000Z",
+      "valueQuantity": {
+        "value": 39,
+        "unit": "Cel",
+        "system": "http://unitsofmeasure.org",
+        "code": "Cel"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Observation/f34f2013-907d-4ebf-ab18-75e642c7cf4b"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Procedure/72c0b385-113f-43f6-b496-37d70c80c293",
+    "resource": {
+      "resourceType": "Procedure",
+      "id": "72c0b385-113f-43f6-b496-37d70c80c293",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-procedure" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-recorded",
+        "valueDateTime": "2026-04-11T10:30:00.000Z"
+      } ],
+      "status": "completed",
+      "category": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "18286008",
+          "display": "General or neuraxial anesthesia"
+        } ]
+      },
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "112943005",
+          "display": "Epidural injection of anesthetic substance, diagnostic, caudal, continuous"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/97f045d5-0c9e-40c5-9f46-7adf4c049598"
+      },
+      "performedPeriod": {
+        "start": "2026-04-11T08:00:00.000Z",
+        "end": "2026-04-11T10:15:00.000Z"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Procedure/72c0b385-113f-43f6-b496-37d70c80c293"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/86d61d33-186f-4991-934c-049b7d53f8d1",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "86d61d33-186f-4991-934c-049b7d53f8d1",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "127fc216-ab4d-4102-92f1-3a20c43b0f5c-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "97f045d5-0c9e-40c5-9f46-7adf4c049598"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#127fc216-ab4d-4102-92f1-3a20c43b0f5c-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "DENOMPass. Satisfies First Body Temp risk variable"
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/CMS1218FHIRHHRF",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "DenominatorExclusion_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 0.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Encounter/4bd61661-cbc0-47b3-870c-e76843dee57c"
+      }, {
+        "reference": "Patient/97f045d5-0c9e-40c5-9f46-7adf4c049598"
+      }, {
+        "reference": "Observation/87cb0008-5001-4a1b-9a06-6cce1718bc79"
+      }, {
+        "reference": "Observation/f34f2013-907d-4ebf-ab18-75e642c7cf4b"
+      }, {
+        "reference": "Procedure/72c0b385-113f-43f6-b496-37d70c80c293"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MeasureReport/86d61d33-186f-4991-934c-049b7d53f8d1"
+    }
+  } ]
+}

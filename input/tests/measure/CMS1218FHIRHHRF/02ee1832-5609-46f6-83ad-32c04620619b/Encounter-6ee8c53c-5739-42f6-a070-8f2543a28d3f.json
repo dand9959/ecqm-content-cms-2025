@@ -1,0 +1,37 @@
+{
+  "resourceType": "Encounter",
+  "id": "6ee8c53c-5739-42f6-a070-8f2543a28d3f",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+  },
+  "status": "finished",
+  "class": {
+    "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+    "code": "IMP",
+    "display": "inpatient encounter"
+  },
+  "type": [ {
+    "coding": [ {
+      "system": "http://snomed.info/sct",
+      "code": "112689000",
+      "display": "Hospital admission, elective, with complete pre-admission work-up"
+    } ],
+    "text": "Hospital admission, elective, with complete pre-admission work-up"
+  } ],
+  "priority": {
+    "coding": [ {
+      "system": "http://snomed.info/sct",
+      "code": "103390000"
+    } ]
+  },
+  "subject": {
+    "reference": "Patient/02ee1832-5609-46f6-83ad-32c04620619b"
+  },
+  "period": {
+    "start": "2026-04-10T08:00:00.000+00:00",
+    "end": "2026-04-14T08:15:00.000+00:00"
+  },
+  "reasonReference": [ {
+    "reference": "Condition/0119d86b-fe51-4a26-bceb-240f127c8111"
+  } ]
+}

@@ -1,0 +1,284 @@
+{
+  "resourceType": "Bundle",
+  "id": "tests-DENEXFail-RiskVariable-BMI-bundle",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Patient/9d11a22c-a1b8-4dd2-ae22-d04194da5e15",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "9d11a22c-a1b8-4dd2-ae22-d04194da5e15",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2054-5",
+            "display": "Black or African American",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "Black or African American"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2186-5",
+            "display": "Not Hispanic or Latino",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "Not Hispanic or Latino"
+        } ]
+      } ],
+      "identifier": [ {
+        "type": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MR"
+          } ]
+        },
+        "system": "https://bonnie-fhir.healthit.gov/",
+        "value": "61152a3b98086b7a79cbd7c1"
+      } ],
+      "active": true,
+      "name": [ {
+        "use": "usual",
+        "family": "DENEXFail",
+        "given": [ "1EncPaO2Exc2EncNum" ]
+      } ],
+      "gender": "female",
+      "birthDate": "1966-07-12"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Patient/9d11a22c-a1b8-4dd2-ae22-d04194da5e15"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/c818828e-d694-418d-9e28-35528377e1a2",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "c818828e-d694-418d-9e28-35528377e1a2",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "IMP",
+        "display": "inpatient encounter"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "112689000",
+          "display": "Hospital admission, elective, with complete pre-admission work-up"
+        } ],
+        "text": "Hospital admission, elective, with complete pre-admission work-up"
+      } ],
+      "priority": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "103390000"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/9d11a22c-a1b8-4dd2-ae22-d04194da5e15"
+      },
+      "period": {
+        "start": "2026-04-10T08:00:00.000Z",
+        "end": "2026-04-14T08:15:00.000Z"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/c818828e-d694-418d-9e28-35528377e1a2"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Observation/c0c1fe1d-460a-42b3-8cef-03df120b0c69",
+    "resource": {
+      "resourceType": "Observation",
+      "id": "c0c1fe1d-460a-42b3-8cef-03df120b0c69",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/core/StructureDefinition/us-core-bmi" ]
+      },
+      "status": "final",
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "code": "vital-signs",
+          "display": "Vital Signs"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://loinc.org",
+          "code": "39156-5",
+          "display": "Body mass index (BMI) [Ratio]"
+        } ],
+        "text": "BMI"
+      },
+      "subject": {
+        "reference": "Patient/9d11a22c-a1b8-4dd2-ae22-d04194da5e15"
+      },
+      "encounter": {
+        "reference": "Encounter/c818828e-d694-418d-9e28-35528377e1a2"
+      },
+      "effectiveDateTime": "2026-04-11T08:00:00.000Z",
+      "valueQuantity": {
+        "value": 28.3,
+        "unit": "kg/m2",
+        "system": "http://unitsofmeasure.org",
+        "code": "kg/m2"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Observation/c0c1fe1d-460a-42b3-8cef-03df120b0c69"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Procedure/5afe5784-c538-4802-8586-98262581acde",
+    "resource": {
+      "resourceType": "Procedure",
+      "id": "5afe5784-c538-4802-8586-98262581acde",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-procedure" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-recorded",
+        "valueDateTime": "2026-04-11T10:30:00.000Z"
+      } ],
+      "status": "completed",
+      "category": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "18286008",
+          "display": "General or neuraxial anesthesia"
+        } ]
+      },
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "112943005",
+          "display": "Epidural injection of anesthetic substance, diagnostic, caudal, continuous"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/9d11a22c-a1b8-4dd2-ae22-d04194da5e15"
+      },
+      "performedPeriod": {
+        "start": "2026-04-11T08:00:00.000Z",
+        "end": "2026-04-11T10:15:00.000Z"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Procedure/5afe5784-c538-4802-8586-98262581acde"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/2e596e45-f5af-4b6d-92a6-7bd9f5d33f1a",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "2e596e45-f5af-4b6d-92a6-7bd9f5d33f1a",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "7049eb05-cbc6-40ac-9f7f-99a141b0b496-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "9d11a22c-a1b8-4dd2-ae22-d04194da5e15"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#7049eb05-cbc6-40ac-9f7f-99a141b0b496-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "DENOMPass Satisfies first BMI risk variable"
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/CMS1218FHIRHHRF",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 1
+        }, {
+          "id": "DenominatorExclusion_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 0.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Patient/9d11a22c-a1b8-4dd2-ae22-d04194da5e15"
+      }, {
+        "reference": "Encounter/c818828e-d694-418d-9e28-35528377e1a2"
+      }, {
+        "reference": "Observation/c0c1fe1d-460a-42b3-8cef-03df120b0c69"
+      }, {
+        "reference": "Procedure/5afe5784-c538-4802-8586-98262581acde"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MeasureReport/2e596e45-f5af-4b6d-92a6-7bd9f5d33f1a"
+    }
+  } ]
+}

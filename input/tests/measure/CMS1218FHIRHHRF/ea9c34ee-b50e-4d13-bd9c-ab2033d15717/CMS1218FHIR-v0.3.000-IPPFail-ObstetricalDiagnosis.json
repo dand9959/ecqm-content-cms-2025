@@ -1,0 +1,301 @@
+{
+  "resourceType": "Bundle",
+  "id": "tests-IPPFail-PregnancyRelatedCondition-bundle",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Condition/91e71583-c873-4afd-a355-afc036c30dd6",
+    "resource": {
+      "resourceType": "Condition",
+      "id": "91e71583-c873-4afd-a355-afc036c30dd6",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition-encounter-diagnosis" ]
+      },
+      "clinicalStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+          "code": "active"
+        } ]
+      },
+      "verificationStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+          "code": "confirmed"
+        } ]
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "encounter-diagnosis",
+          "display": "Encounter Diagnosis"
+        } ]
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/sid/icd-10-cm",
+          "code": "O22.30",
+          "display": "Deep phlebothrombosis in pregnancy, unspecified trimester"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/ea9c34ee-b50e-4d13-bd9c-ab2033d15717"
+      },
+      "encounter": {
+        "reference": "Encounter/d767dc28-3e1b-493d-83e0-85867da9d85b"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Condition/91e71583-c873-4afd-a355-afc036c30dd6"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Patient/ea9c34ee-b50e-4d13-bd9c-ab2033d15717",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "ea9c34ee-b50e-4d13-bd9c-ab2033d15717",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2028-9",
+            "display": "Asian",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "Asian"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2186-5",
+            "display": "Not Hispanic or Latino",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "Not Hispanic or Latino"
+        } ]
+      } ],
+      "identifier": [ {
+        "type": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MR"
+          } ]
+        },
+        "system": "https://bonnie-fhir.healthit.gov/",
+        "value": "61152a3b98086b7a79cbd7c1"
+      } ],
+      "active": true,
+      "name": [ {
+        "use": "usual",
+        "family": "IPPFail",
+        "given": [ "ObstetricalDiagnosis" ]
+      } ],
+      "gender": "female",
+      "birthDate": "1966-04-09"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Patient/ea9c34ee-b50e-4d13-bd9c-ab2033d15717"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Procedure/edb8f5bc-2a8d-442d-abd2-e23f8ecce9dd",
+    "resource": {
+      "resourceType": "Procedure",
+      "id": "edb8f5bc-2a8d-442d-abd2-e23f8ecce9dd",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-procedure" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-recorded",
+        "valueDateTime": "2026-04-11T10:30:00.000Z"
+      } ],
+      "status": "completed",
+      "category": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "18286008",
+          "display": "General or neuraxial anesthesia"
+        } ]
+      },
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "112943005",
+          "display": "Epidural injection of anesthetic substance, diagnostic, caudal, continuous"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/ea9c34ee-b50e-4d13-bd9c-ab2033d15717"
+      },
+      "performedPeriod": {
+        "start": "2026-04-11T08:00:00.000Z",
+        "end": "2026-04-11T10:15:00.000Z"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Procedure/edb8f5bc-2a8d-442d-abd2-e23f8ecce9dd"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/d767dc28-3e1b-493d-83e0-85867da9d85b",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "d767dc28-3e1b-493d-83e0-85867da9d85b",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "IMP",
+        "display": "inpatient encounter"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "112689000",
+          "display": "Hospital admission, elective, with complete pre-admission work-up"
+        } ],
+        "text": "Hospital admission, elective, with complete pre-admission work-up"
+      } ],
+      "priority": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "103390000"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/ea9c34ee-b50e-4d13-bd9c-ab2033d15717"
+      },
+      "period": {
+        "start": "2026-04-10T08:00:00.000Z",
+        "end": "2026-04-14T08:15:00.000Z"
+      },
+      "reasonCode": [ {
+        "coding": [ {
+          "system": "http://hl7.org/fhir/sid/icd-10-cm",
+          "code": "O00.01",
+          "display": "Abdominal pregnancy with intrauterine pregnancy"
+        } ],
+        "text": "Abdominal pregnancy with intrauterine pregnancy"
+      } ],
+      "diagnosis": [ {
+        "condition": {
+          "reference": "Condition/91e71583-c873-4afd-a355-afc036c30dd6"
+        },
+        "rank": 1
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/d767dc28-3e1b-493d-83e0-85867da9d85b"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/562c761b-b9bb-439e-8308-65e8c3af34a0",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "562c761b-b9bb-439e-8308-65e8c3af34a0",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "23173754-fe2a-49cb-9daf-a29130e74f51-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "ea9c34ee-b50e-4d13-bd9c-ab2033d15717"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#23173754-fe2a-49cb-9daf-a29130e74f51-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "Elective hospitalization with procedure (general anesthesia) within first 3 days of encounter. Has encounter diagnosis for an obstetrical condition, so does not meet IPP. Must not have OB condition to be in IPP. "
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/CMS1218FHIRHHRF",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "DenominatorExclusion_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 0.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Condition/91e71583-c873-4afd-a355-afc036c30dd6"
+      }, {
+        "reference": "Patient/ea9c34ee-b50e-4d13-bd9c-ab2033d15717"
+      }, {
+        "reference": "Procedure/edb8f5bc-2a8d-442d-abd2-e23f8ecce9dd"
+      }, {
+        "reference": "Encounter/d767dc28-3e1b-493d-83e0-85867da9d85b"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MeasureReport/562c761b-b9bb-439e-8308-65e8c3af34a0"
+    }
+  } ]
+}

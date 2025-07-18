@@ -1,0 +1,93 @@
+{
+  "resourceType": "MeasureReport",
+  "id": "8f558f11-ff1c-41c0-860f-b9879bbfa8b1",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+  },
+  "contained": [ {
+    "resourceType": "Parameters",
+    "id": "9a3a398c-a2bf-4ace-8419-3a53e7cb232b-parameters",
+    "parameter": [ {
+      "name": "subject",
+      "valueString": "683be14a-90bc-41bd-a96b-6a1297f5f42e"
+    } ]
+  } ],
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+    "valueReference": {
+      "reference": "#9a3a398c-a2bf-4ace-8419-3a53e7cb232b-parameters"
+    }
+  }, {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+    "valueMarkdown": "DENOMPass Satisfies First Creatinine risk variable"
+  } ],
+  "modifierExtension": [ {
+    "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+    "valueBoolean": true
+  } ],
+  "status": "complete",
+  "type": "individual",
+  "measure": "https://madie.cms.gov/Measure/CMS1218FHIRHHRF",
+  "period": {
+    "start": "2026-01-01",
+    "end": "2026-12-31"
+  },
+  "group": [ {
+    "id": "Group_1",
+    "population": [ {
+      "id": "InitialPopulation_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "initial-population",
+          "display": "Initial Population"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "Denominator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator",
+          "display": "Denominator"
+        } ]
+      },
+      "count": 1
+    }, {
+      "id": "DenominatorExclusion_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "denominator-exclusion",
+          "display": "Denominator Exclusion"
+        } ]
+      },
+      "count": 0
+    }, {
+      "id": "Numerator_1",
+      "code": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+          "code": "numerator",
+          "display": "Numerator"
+        } ]
+      },
+      "count": 0
+    } ],
+    "measureScore": {
+      "value": 0.0
+    }
+  } ],
+  "evaluatedResource": [ {
+    "reference": "Encounter/d8993884-4b68-4353-8a62-360e8ba775be"
+  }, {
+    "reference": "Patient/683be14a-90bc-41bd-a96b-6a1297f5f42e"
+  }, {
+    "reference": "Observation/59ad9e53-af84-49ca-9107-a6305a999ef5"
+  }, {
+    "reference": "Observation/c9d941d6-52e5-4ad1-81f3-6cb866f4ebd9"
+  }, {
+    "reference": "Procedure/1df0f5db-d5be-4050-a9a0-cec8143b3dcc"
+  } ]
+}

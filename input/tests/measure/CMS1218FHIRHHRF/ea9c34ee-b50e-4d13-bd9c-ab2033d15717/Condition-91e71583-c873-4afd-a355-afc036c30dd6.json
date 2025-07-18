@@ -1,0 +1,39 @@
+{
+  "resourceType": "Condition",
+  "id": "91e71583-c873-4afd-a355-afc036c30dd6",
+  "meta": {
+    "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-condition-encounter-diagnosis" ]
+  },
+  "clinicalStatus": {
+    "coding": [ {
+      "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+      "code": "active"
+    } ]
+  },
+  "verificationStatus": {
+    "coding": [ {
+      "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+      "code": "confirmed"
+    } ]
+  },
+  "category": [ {
+    "coding": [ {
+      "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+      "code": "encounter-diagnosis",
+      "display": "Encounter Diagnosis"
+    } ]
+  } ],
+  "code": {
+    "coding": [ {
+      "system": "http://hl7.org/fhir/sid/icd-10-cm",
+      "code": "O22.30",
+      "display": "Deep phlebothrombosis in pregnancy, unspecified trimester"
+    } ]
+  },
+  "subject": {
+    "reference": "Patient/ea9c34ee-b50e-4d13-bd9c-ab2033d15717"
+  },
+  "encounter": {
+    "reference": "Encounter/d767dc28-3e1b-493d-83e0-85867da9d85b"
+  }
+}

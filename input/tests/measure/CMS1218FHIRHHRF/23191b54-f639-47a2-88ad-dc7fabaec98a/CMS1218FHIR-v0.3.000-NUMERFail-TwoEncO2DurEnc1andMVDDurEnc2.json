@@ -1,0 +1,391 @@
+{
+  "resourceType": "Bundle",
+  "id": "tests-23191b54-f639-47a2-88ad-dc7fabaec98a-bundle",
+  "type": "transaction",
+  "entry": [ {
+    "fullUrl": "https://madie.cms.gov/Encounter/6aa26bee-1853-4d7b-811e-187d99485724",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "6aa26bee-1853-4d7b-811e-187d99485724",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "IMP",
+        "display": "inpatient encounter"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "112689000",
+          "display": "Hospital admission, elective, with complete pre-admission work-up"
+        } ],
+        "text": "Hospital admission, elective, with complete pre-admission work-up"
+      } ],
+      "priority": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "103390000"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/23191b54-f639-47a2-88ad-dc7fabaec98a"
+      },
+      "period": {
+        "start": "2026-05-14T11:00:00.000+00:00",
+        "end": "2026-05-20T08:15:00.000+00:00"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/6aa26bee-1853-4d7b-811e-187d99485724"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Procedure/69bdd3e8-4f58-4107-ba2e-d8a87e928ff3",
+    "resource": {
+      "resourceType": "Procedure",
+      "id": "69bdd3e8-4f58-4107-ba2e-d8a87e928ff3",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-procedure" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-recorded",
+        "valueDateTime": "2026-05-06T08:15:30.000+00:00"
+      } ],
+      "status": "completed",
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "version": "2023-09",
+          "code": "304577004",
+          "display": "Humidified oxygen therapy (procedure)"
+        } ],
+        "text": "Humidified oxygen therapy (procedure)"
+      },
+      "subject": {
+        "reference": "Patient/23191b54-f639-47a2-88ad-dc7fabaec98a"
+      },
+      "performedDateTime": "2026-05-06T08:10:00.000+00:00"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Procedure/69bdd3e8-4f58-4107-ba2e-d8a87e928ff3"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Procedure/9dab03a4-f2b3-4880-b194-78c04fe2e99a",
+    "resource": {
+      "resourceType": "Procedure",
+      "id": "9dab03a4-f2b3-4880-b194-78c04fe2e99a",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-procedure" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-recorded",
+        "valueDateTime": "2026-05-15T12:20:00.000+00:00"
+      } ],
+      "status": "completed",
+      "category": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "18286008",
+          "display": "General or neuraxial anesthesia"
+        } ]
+      },
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "112943005",
+          "display": "Epidural injection of anesthetic substance, diagnostic, caudal, continuous"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/23191b54-f639-47a2-88ad-dc7fabaec98a"
+      },
+      "performedPeriod": {
+        "start": "2026-05-15T11:00:00.000+00:00",
+        "end": "2026-05-15T12:15:00.000+00:00"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Procedure/9dab03a4-f2b3-4880-b194-78c04fe2e99a"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Procedure/cc78a575-ba1b-49d0-8f26-c927a95c04f1",
+    "resource": {
+      "resourceType": "Procedure",
+      "id": "cc78a575-ba1b-49d0-8f26-c927a95c04f1",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-procedure" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-recorded",
+        "valueDateTime": "2026-05-15T10:20:00.000+00:00"
+      } ],
+      "status": "completed",
+      "category": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "18286008",
+          "display": "General or neuraxial anesthesia"
+        } ]
+      },
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "112943005",
+          "display": "Epidural injection of anesthetic substance, diagnostic, caudal, continuous"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/23191b54-f639-47a2-88ad-dc7fabaec98a"
+      },
+      "performedPeriod": {
+        "start": "2026-05-05T09:00:00.000+00:00",
+        "end": "2026-05-05T10:15:00.000+00:00"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Procedure/cc78a575-ba1b-49d0-8f26-c927a95c04f1"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Encounter/3bfe73c8-cbdc-47c3-9693-a22539eaa940",
+    "resource": {
+      "resourceType": "Encounter",
+      "id": "3bfe73c8-cbdc-47c3-9693-a22539eaa940",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-encounter" ]
+      },
+      "status": "finished",
+      "class": {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "IMP",
+        "display": "inpatient encounter"
+      },
+      "type": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "112689000",
+          "display": "Hospital admission, elective, with complete pre-admission work-up"
+        } ],
+        "text": "Hospital admission, elective, with complete pre-admission work-up"
+      } ],
+      "priority": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "103390000"
+        } ]
+      },
+      "subject": {
+        "reference": "Patient/23191b54-f639-47a2-88ad-dc7fabaec98a"
+      },
+      "period": {
+        "start": "2026-05-04T11:00:00.000+00:00",
+        "end": "2026-05-13T08:15:00.000+00:00"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Encounter/3bfe73c8-cbdc-47c3-9693-a22539eaa940"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Procedure/95941ccd-cd8b-4255-8920-ec340b021619",
+    "resource": {
+      "resourceType": "Procedure",
+      "id": "95941ccd-cd8b-4255-8920-ec340b021619",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-procedure" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-recorded",
+        "valueDateTime": "2026-05-15T13:20:30.000+00:00"
+      } ],
+      "status": "completed",
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "1258985005",
+          "display": "Invasive Mechanical Ventilation"
+        } ],
+        "text": "Invasive Mechanical Ventilation"
+      },
+      "subject": {
+        "reference": "Patient/23191b54-f639-47a2-88ad-dc7fabaec98a"
+      },
+      "performedPeriod": {
+        "start": "2026-05-15T13:04:00.000+00:00",
+        "end": "2026-05-15T13:19:00.000+00:00"
+      }
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Procedure/95941ccd-cd8b-4255-8920-ec340b021619"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/Patient/23191b54-f639-47a2-88ad-dc7fabaec98a",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "23191b54-f639-47a2-88ad-dc7fabaec98a",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/qicore/StructureDefinition/qicore-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2054-5",
+            "display": "Black or African American",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "Black or African American"
+        } ]
+      }, {
+        "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+        "extension": [ {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2186-5",
+            "display": "Not Hispanic or Latino",
+            "userSelected": true
+          }
+        }, {
+          "url": "text",
+          "valueString": "Not Hispanic or Latino"
+        } ]
+      } ],
+      "identifier": [ {
+        "type": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MR"
+          } ]
+        },
+        "system": "https://bonnie-fhir.healthit.gov/",
+        "value": "61152a3b98086b7a79cbd7c1"
+      } ],
+      "active": true,
+      "name": [ {
+        "use": "usual",
+        "family": "NUMERPass",
+        "given": [ "Num2TwoEncO2DurEnc1andMVDDurEnc2" ]
+      } ],
+      "gender": "female",
+      "birthDate": "1966-07-12"
+    },
+    "request": {
+      "method": "PUT",
+      "url": "Patient/23191b54-f639-47a2-88ad-dc7fabaec98a"
+    }
+  }, {
+    "fullUrl": "https://madie.cms.gov/MeasureReport/0228307b-f52b-46fb-8468-3946faa6f90d",
+    "resource": {
+      "resourceType": "MeasureReport",
+      "id": "0228307b-f52b-46fb-8468-3946faa6f90d",
+      "meta": {
+        "profile": [ "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/test-case-cqfm" ]
+      },
+      "contained": [ {
+        "resourceType": "Parameters",
+        "id": "3fd65d11-0653-49ad-9844-537339c4410b-parameters",
+        "parameter": [ {
+          "name": "subject",
+          "valueString": "23191b54-f639-47a2-88ad-dc7fabaec98a"
+        } ]
+      } ],
+      "extension": [ {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-inputParameters",
+        "valueReference": {
+          "reference": "#3fd65d11-0653-49ad-9844-537339c4410b-parameters"
+        }
+      }, {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-testCaseDescription",
+        "valueMarkdown": "2 encounters. Enc1: O2 after procedure Enc2: MV after end of procedure  Fails numerator because enc1 has no MV, and enc2 has no O2"
+      } ],
+      "modifierExtension": [ {
+        "url": "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-isTestCase",
+        "valueBoolean": true
+      } ],
+      "status": "complete",
+      "type": "individual",
+      "measure": "https://madie.cms.gov/Measure/CMS1218FHIRHHRF",
+      "period": {
+        "start": "2026-01-01",
+        "end": "2026-12-31"
+      },
+      "group": [ {
+        "id": "Group_1",
+        "population": [ {
+          "id": "InitialPopulation_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "initial-population",
+              "display": "Initial Population"
+            } ]
+          },
+          "count": 2
+        }, {
+          "id": "Denominator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator",
+              "display": "Denominator"
+            } ]
+          },
+          "count": 2
+        }, {
+          "id": "DenominatorExclusion_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "denominator-exclusion",
+              "display": "Denominator Exclusion"
+            } ]
+          },
+          "count": 0
+        }, {
+          "id": "Numerator_1",
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/measure-population",
+              "code": "numerator",
+              "display": "Numerator"
+            } ]
+          },
+          "count": 0
+        } ],
+        "measureScore": {
+          "value": 0.0
+        }
+      } ],
+      "evaluatedResource": [ {
+        "reference": "Encounter/6aa26bee-1853-4d7b-811e-187d99485724"
+      }, {
+        "reference": "Procedure/69bdd3e8-4f58-4107-ba2e-d8a87e928ff3"
+      }, {
+        "reference": "Procedure/9dab03a4-f2b3-4880-b194-78c04fe2e99a"
+      }, {
+        "reference": "Procedure/cc78a575-ba1b-49d0-8f26-c927a95c04f1"
+      }, {
+        "reference": "Encounter/3bfe73c8-cbdc-47c3-9693-a22539eaa940"
+      }, {
+        "reference": "Procedure/95941ccd-cd8b-4255-8920-ec340b021619"
+      }, {
+        "reference": "Patient/23191b54-f639-47a2-88ad-dc7fabaec98a"
+      } ]
+    },
+    "request": {
+      "method": "PUT",
+      "url": "MeasureReport/0228307b-f52b-46fb-8468-3946faa6f90d"
+    }
+  } ]
+}
